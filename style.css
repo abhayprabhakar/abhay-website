@@ -313,6 +313,7 @@ nav .fas{
         margin-right: 5px;
     }
     .tab-links:hover{
+        margin-right: 5px;
         padding: 10px 12px;
     }
     .tab-contents ul li span{
