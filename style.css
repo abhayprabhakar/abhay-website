@@ -307,12 +307,12 @@ nav .fas{
     }
     .btn{
         background-color: #ff004f;
-    }
     .tab-links{
-        padding: 10px 15px; 
+        padding: 10px 10px; 
+        margin-right: 5px;
     }
     .tab-links:hover{
-        padding: 10px 20px;
+        padding: 10px 12px;
     }
     .tab-contents ul li span{
         color: #b54769;
