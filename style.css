@@ -296,7 +296,7 @@ nav .fas{
         font-size: 14px;
     }
     .tab-links{
-        font-size: 14px;
+        font-size: 16px;
         margin-right: 5px;
     }
     .contact-left, .contact-right{
@@ -307,6 +307,7 @@ nav .fas{
     }
     .btn{
         background-color: #ff004f;
+    }
     .tab-links{
         padding: 10px 10px; 
         margin-right: 5px;
