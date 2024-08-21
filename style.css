@@ -336,7 +336,8 @@ nav .fas{
         font-size: 25px;
     }
     nav ul{
-        background: #ff004f;
+        background: rgba(38, 38, 38, 0.4);
+        backdrop-filter: blur(8px);
         border-radius: 20px;
         position: fixed;
         margin-right: 5px;
