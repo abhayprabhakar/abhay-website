@@ -31,6 +31,7 @@ nav{
     align-items: center;
     justify-content: space-between;
     flex-wrap: wrap;
+    margin-top: 10px;
 }
 
 .logo{
@@ -40,15 +41,7 @@ nav ul li{
     display: inline-block;
     list-style: none;
 }
-nav ul li a {
-    color:#fff;
-    text-decoration: none;
-    font-size: 18px;
-    padding: 10px 20px;
-    position: relative;
-    transition: 0.5s;
-    border-radius: 100px;
-}
+
 /* nav ul li a::after{
     content:'';
     width: 0;
@@ -63,12 +56,44 @@ nav ul li a:hover::after{
     width:100%;
     
 } */
-nav ul li a:hover{
-    background-color: #262626DF;
-    background-blend-mode: lighten;
+/* Basic styling for the nav links */
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
     padding: 10px 20px;
-    border-radius: 100px;
+    position: relative;
+    transition: 0.5s;
+    border-radius: 50px; /* Make the box round */
 }
+
+/* Hover effect to add background and blur */
+nav ul li a::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 50px; /* Round shape */
+    background-color: rgba(38, 38, 38, 0.4); /* Transparent background */
+    backdrop-filter: blur(8px); /* Blur effect */
+    opacity: 0; /* Start hidden */
+    transition: opacity 0.5s; /* Smooth transition */
+    z-index: -1; /* Place it behind the text */
+}
+
+/* When hovering, show the background blur */
+nav ul li a:hover::before {
+    opacity: 1; /* Show the background on hover */
+}
+
+/* Ensure the text is above the blurred background */
+nav ul li a {
+    position: relative;
+    z-index: 1;
+}
+
 .header-text{
     margin-top: 20%;
     font-size: 30px;
@@ -154,6 +179,57 @@ nav ul li a:hover{
     background-color: #585858;
     border-radius: 2px;
 }
+/* ---------------projects-------------- */
+#projects {
+    padding: 80px 0;
+    color: #ababab;
+}
+
+.project-col {
+    flex-basis: 30%;
+    margin-bottom: 30px;
+    padding: 10px 10px;
+    text-align: center;
+    transition: transform 0.5s, box-shadow 0.5s;
+    border-radius: 15px;
+    color: #fff;
+}
+
+.project-col img {
+    width: 100%;
+    border-radius: 15px;
+}
+
+.project-col:hover {
+    transform: scale(1.05);
+    background-color: rgba(38, 38, 38, 0.2);
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(4px);
+    color:#ff004f;
+    transition: 0.5s;
+}
+
+.project-col h3 {
+    font-size: 24px;
+    margin: 15px 0 10px;
+}
+
+.project-col p {
+    color: #ababab;
+    font-size: 16px;
+}
+.project-col a {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+    transition: transform 0.5s, box-shadow 0.5s;
+}
+
+/* .project-col a:hover {
+    transform: scale(1.00);
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.2);
+} */
+
 /* ---------------contact-------------- */
 .contact-left{
     flex-basis: 35%;
@@ -277,6 +353,21 @@ nav .fas{
         display: block;
         margin: 25px;
     }
+    nav ul li a {
+        background-color: transparent; /* Reset background */
+        transition: background-color 0.3s ease;
+        position: relative; /* Ensure no overlap */
+        z-index: 1;
+    }
+
+    nav ul li a::before {
+        display: none; /* Hide the hover background effect */
+    }
+
+    nav ul li a:active,
+    nav ul li a.active {
+        background-color: rgba(0,0,0, 0.7); /* Darker background when pressed */
+    }
     nav ul .fas{
         position: absolute;
         top: 25px;
@@ -319,5 +410,21 @@ nav .fas{
     .tab-contents ul li span{
         color: #b54769;
         font-size: 16px;
+    }
+    .project-col {
+        flex-basis: 100%; /* Take up the full width */
+        margin-bottom: 20px;
+    }
+
+    #projects {
+        padding: 40px 10px; /* Adjust padding for smaller screens */
+    }
+
+    .project-col h3 {
+        font-size: 20px; /* Slightly smaller text */
+    }
+
+    .project-col p {
+        font-size: 14px; /* Slightly smaller text */
     }
 }
