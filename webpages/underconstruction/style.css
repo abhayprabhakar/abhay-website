@@ -42,7 +42,7 @@ html, body {
     color: #ababab;
 }
 
-nav {
+nav a {
     display: flex;
     align-items: center;
     justify-content: space-between;
