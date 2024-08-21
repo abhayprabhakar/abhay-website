@@ -83,6 +83,8 @@ nav {
 
     #construction p {
         font-size: 1rem; /* Smaller paragraph size for mobile */
+        margin-left: 15px;
+        margin-right: 15px;
     }
 
     #main-content img {
