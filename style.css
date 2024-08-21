@@ -349,6 +349,7 @@ nav .fas{
         padding-top: 50px;
         z-index: 2;
         transition: right 0.5s;
+        box-shadow: 0 15px 25px rgba(0, 0, 0, 0.2);
     }
     nav ul li{
         display: block;
