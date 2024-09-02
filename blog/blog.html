@@ -1,0 +1,88 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Abhay.</title>
+    <link rel="icon" type="image/x-icon" href="/images/favicon.png">
+    <link rel="stylesheet" type="text/css" href="blog.css">
+    <script src="script.js"></script>  
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="icon" href="#" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/bf6f013437.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div id="header">  
+        <div class="container">
+            <nav><a href="https://abhayprabhakar.co.in"><img src="/abhay-website-main/images/logo1.png" alt="logo" class="logo"></a>
+            <ul id="sidemenu">
+                <li><a href="https://abhayprabhakar.co.in/#about">About</a></li>
+                <li><a href="https://abhayprabhakar.co.in/#contact">Contact</a></li>
+                <i class="fas fa-times" onclick="closemenu()"></i>
+            </ul> 
+            <i class="fas fa-bars" onclick="openmenu()"></i>
+            </nav>
+        </div>
+    </div>
+    <div id="blog-post-card">
+        <div class="container">
+            <h1 class="sub-title">Blogs</h1>
+            <div class="row">
+                <div class="project-col">
+                    <a href="webpages/underconstruction/under-construction.html" target="_blank">
+                        <img src="/abhay-website-main/images/project1.png" alt="Project 1">
+                        <h3>SaniLevel</h3>
+                    </a>
+                    <p>SaniLevel is an advanced monitoring system designed to maintain optimal hygiene levels in your bathroom by detecting and measuring ammonia gas concentrations.</p>
+                </div>
+                <div class="project-col">
+                    <a href="webpages/underconstruction/under-construction.html" target="_blank">
+                        <img src="/abhay-website-main/blog/Gemini/img/gemini.jpeg" alt="Project 2">
+                        <h3>Gemini-Powered CryptoChat</h3>
+                    </a>
+                    <p>Gemini-Powered CryptoChat is a user-friendly chatbot that encrypts and decrypts files using natural language prompts, leveraging the power of the Gemini API.</p>
+                </div>
+                <div class="project-col">
+                    <a href="webpages/underconstruction/under-construction.html" target="_blank">
+                        <img src="/abhay-website-main/blog/hand_gesture/img/hand_gesture.jpeg" alt="Project 3">
+                        <h3>GestureMouse</h3>
+                    </a>
+                    <p>This allows users to control their mouse cursor using hand gestures, offering a more intuitive and natural way to interact with computers.</p>
+                </div> 
+            </div>
+        </div>
+    </div>
+    <div id="line"></div>
+    <div id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="contact-left">
+                    <h1 class="sub-title">Contact Me</h1>
+                    <p><i class="fa-solid fa-paper-plane"></i><a href="mailto:abhay@abhayprabhakar.co.in" style="text-decoration: none; color: #fff;">abhay@abhayprabhakar.co.in</a></p>
+                    <p><i class="fa-solid fa-phone"></i><a href="tel:9148267350" style="text-decoration: none; color: #fff;">+91 9148267350</a></p>
+                    <div class="social-icons">
+                        <a href="https://github.com/abhayprabhakar"><i class="fab fa-github" target="_blank"></i></a>
+                        <a href="https://www.facebook.com/profile.php?id=61550520278416" target="_blank"><i class="fab fa-facebook"></i></a>
+                        <!-- <a href=""><i class="fab fa-twitter" target="_blank"></i></a> -->
+                        <a href="https://www.instagram.com/abhay.__.p/" target="_blank"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.linkedin.com/in/abhay-prabhakar" target="_blank"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+                <div class="contact-right">
+                    <form name="submit-to-google-sheet">
+                        <input type="text" name="name" placeholder="Your Name" required>
+                        <input type="email" name="email" placeholder="Your Email" required>
+                        <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                        <button type="submit" class="btn btn2">Submit</button><span id="submit-msg"></span>
+                    </form>
+                </div>
+            </div> 
+        </div>
+        <div class="copyright">
+            <p>Copyright © Abhay. Made with <i class="fas fa-heart"></i> by Abhay Prabhakar</p>
+        </div>
+    </div>
+</body>
