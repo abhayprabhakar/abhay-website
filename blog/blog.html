@@ -85,4 +85,75 @@
             <p>Copyright © Abhay. Made with <i class="fas fa-heart"></i> by Abhay Prabhakar</p>
         </div>
     </div>
+        <script>
+        var tablinks = document.getElementsByClassName("tab-links")
+        var tabcontents = document.getElementsByClassName("tab-contents")
+
+        function opentab(tabname){
+            for(tablink of tablinks){
+                tablink.classList.remove("active-link")
+            }
+            for(tabcontent of tabcontents){
+                tabcontent.classList.remove("active-tab")
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab")
+        }
+    </script>
+    <script>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbxhSXZ9eIer__YmF1ODlg59rWF9BEgcBbfNhXtg03JTKdmngN87oOhpm9jbAMnG3ALr5Q/exec'
+        const form = document.forms['submit-to-google-sheet']
+        const msg = document.getElementById("submit-msg")
+        form.addEventListener('submit', e => {
+          e.preventDefault()
+          msg.style = "color: #fff"
+          msg.innerHTML = "Processing..."
+          
+          fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+            .then(response => {
+                msg.style = "color: #61b752"
+                msg.innerHTML = "Success!"
+                setTimeout(function(){
+                    msg.innerHTML = ""
+                }, 5000)
+                form.reset()
+            })
+            .catch(error => {
+                msg.style = "color: #ff004f"
+                msg.innerHTML = "Try Again!"
+                setTimeout(function(){
+                    msg.innerHTML = ""
+                }, 5000)
+                form.reset()
+            })
+        })
+      </script>
+      <script>
+
+        var sidemenu = document.getElementById("sidemenu");
+
+        function openmenu(){
+            sidemenu.style.right = "0";
+        }
+
+        function closemenu(){
+            sidemenu.style.right = "-200px";
+        }
+
+      </script>
+      <script>
+        // JavaScript to handle the active state of the nav links
+        document.querySelectorAll('nav ul li a').forEach(link => {
+            link.addEventListener('click', function() {
+        // Remove the active class from all links
+                document.querySelectorAll('nav ul li a').forEach(link => {
+                    link.classList.remove('active');
+            });
+
+        // Add the active class to the clicked link
+            this.classList.add('active');
+            });
+        });
+
+      </script>
 </body>
